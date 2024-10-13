@@ -15,7 +15,6 @@ export class BookingController {
     @Body() createBookingDto: CreateBookingsDto,
     @Param('id', ParseIntPipe) hotelID: number): Promise<BookingsEntity> {
     const userID = req.user.id;
-    console.log("================\n"+userID+"================\n");
     return this.bookingService.createBooking(userID, hotelID, createBookingDto.room, createBookingDto.bookingDate);
   }
 

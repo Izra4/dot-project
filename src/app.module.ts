@@ -22,7 +22,7 @@ import { BookingsModule } from './modules/bookings/bookings.module';
         username: configService.get('DB_USER'),
         password: configService.get('DB_PASS'),
         database: configService.get('DB_NAME'),
-        entities: [join(process.cwd(), 'dist/**/*.entity{.ts,.js}')],
+        entities: [join(__dirname, '**', '*.entity.{ts,js}')],
         synchronize: true,
       }),
       inject: [ConfigService],

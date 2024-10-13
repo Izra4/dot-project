@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, NotFoundException, Post } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { LoginAuthDto } from './dto/login.auth';
 
@@ -13,10 +13,7 @@ export class AuthController {
       loginAuthDto.password,
     );
     if (!user) {
-      return {
-        statusCode: 400,
-        message: 'Email or password is incorrect',
-      };
+      throw new NotFoundException('email / password invalid');
     }
     return this.authService.login(user);
   }
