@@ -5,6 +5,7 @@ import { UsersModule } from './modules/users/users.module';
 import { join } from 'path';
 import * as process from 'node:process';
 import { AuthModule } from './modules/auth/auth.module';
+import { HotelsModule } from './modules/hotels/hotels.module';
 
 @Module({
   imports: [
@@ -26,8 +27,9 @@ import { AuthModule } from './modules/auth/auth.module';
       inject: [ConfigService],
     }),
 
-    UsersModule,
     AuthModule,
+    UsersModule,
+    HotelsModule,
   ],
 })
 export class AppModule {}
