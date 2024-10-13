@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { UserModule } from './modules/users/user.module';
-import {join} from 'path'
+import { UsersModule } from './modules/users/users.module';
+import { join } from 'path';
 import * as process from 'node:process';
 
 @Module({
@@ -23,7 +23,7 @@ import * as process from 'node:process';
       inject: [ConfigService],
     }),
 
-    UserModule,
+    UsersModule,
   ],
 })
 export class AppModule {}
