@@ -6,6 +6,7 @@ import { join } from 'path';
 import * as process from 'node:process';
 import { AuthModule } from './modules/auth/auth.module';
 import { HotelsModule } from './modules/hotels/hotels.module';
+import { BookingsModule } from './modules/bookings/bookings.module';
 
 @Module({
   imports: [
@@ -30,6 +31,7 @@ import { HotelsModule } from './modules/hotels/hotels.module';
     AuthModule,
     UsersModule,
     HotelsModule,
+    BookingsModule,
   ],
 })
 export class AppModule {}

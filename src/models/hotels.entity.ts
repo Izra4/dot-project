@@ -1,4 +1,5 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { BookingsEntity } from './bookings.entity';
 
 @Entity('hotels')
 export class HotelsEntity{
@@ -16,4 +17,7 @@ export class HotelsEntity{
 
   @CreateDateColumn({ type: 'timestamp' })
   updatedAt: Date;
+
+  @OneToMany(() => BookingsEntity, (booking) => booking.hotel)
+  bookings: BookingsEntity[]
 }
