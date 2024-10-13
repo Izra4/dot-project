@@ -43,7 +43,8 @@ Struktur direktori yang terorganisir dengan baik akan sangat membantu, seperti:
 
 Memilih arsitektur modular yang didukung oleh dependency injection benar-benar membantu untuk membangun program backend yang scalable, maintainable, dan mudah dikembangkan. Struktur direktori yang jelas memastikan bahwa proses dev akan lebih efisien
 
-
+API Documentation:
+https://documenter.getpostman.com/view/25930415/2sAXxS9BtB#c99309a3-f1f5-48f1-9764-762c7caa91be
 
 
 
